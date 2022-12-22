@@ -1,0 +1,143 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+body{
+background-color: rgb(42, 43, 53);
+overflow-x: hidden;
+}
+header{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(27, 24, 24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#form{
+    width: 50%;
+}
+.searchIcon{
+    position: absolute;
+    color: black;
+    font-size: 1.5rem;
+    top: 18px;
+    /* left:10px; */
+    margin-left: 0.5rem;
+    
+}
+#search{
+    /* position: relative; */
+    width: 100%;
+   height: 2.5rem;
+    border-radius: 5px;
+    font-size:18px ;
+    outline: none;
+    border: 1px solid rgb(31, 155, 228);
+    background-color: rgb(255, 255, 255);
+    padding: 0rem 3rem;
+}
+#search::placeholder{
+    color: rgb(0, 0, 0);
+    
+}
+
+.btn{
+    padding: 10px 15px;
+    background-color: rgb(41, 245, 245);
+    border: none;
+    margin-right: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btn:hover{
+    background-color: rgb(72, 202, 241);
+}
+.heading{
+    margin-top: 10px;
+    text-align: center;
+}
+.card-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+  width: 20%;
+  margin: 1rem;
+  background-color: rgb(99, 106, 126);
+  border-radius: 3px;
+  box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1 );
+  position: relative;
+  overflow: hidden;
+}
+.title{
+    margin: auto;
+    text-align: center;
+}
+.rating{
+margin: 8px 10px;
+width: 20px;
+height: 20px;
+text-align: center;
+    background-color: rgb(146, 70, 70);
+    color: aquamarine;
+}
+.card img{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(230, 196, 196);
+}
+.card .content{
+display: flex;
+justify-content: space-between;
+padding:0px 10px;
+}
+.overview{
+    position: absolute;
+    left: 0;
+    right:0 ;
+    bottom: 0;
+    background-color: #fff;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: 0.3s ease-in;
+}
+.card:hover .overview{
+    transform: translateY(0%);
+}
+
+
+@media screen and (max-width:400px){
+    .card-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+.card{
+    width: 100%;
+}
+#form{
+    width: 90%;
+}
+#search{
+    width:100%;
+}
+}
+
+
+@media screen and (max-width:600px){
+.card{
+    width: 40%;
+}
+#form{
+    width: 90%;
+}
+#search{
+    width:100%;
+}
+}

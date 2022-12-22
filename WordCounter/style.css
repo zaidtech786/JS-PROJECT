@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,118,1) 35%, rgba(0,212,255,1) 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction: column;
+}
+h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.h1{
+    color: #1abc9c;
+
+}
+.textArea{
+    width: 35%;
+    height: 300px;
+    font-size: 20px;
+    resize: none;
+    outline:none;
+}
+.spanContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #7ed6df;
+    width:  35%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.Word{
+    padding: 10px;
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.char{
+    padding:  10px;
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+#char{
+    padding-left: 10px;
+    font-size: 25px;
+    margin-top: 10px;
+}
+#word{
+    font-size: 25px;
+    margin-top: 10px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .textArea{
+        width: 80%;
+        height: 200px;
+    }
+    .spanContainer{
+        width: 80%;
+    }
+    /* .Word{
+        padding: 6px;
+       
+    }
+    .char{
+        padding:  6px;
+        
+    } */
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Demo JS</title>
+    <style>
+        p{
+            display: none;
+        }
+        .closeBtn{
+            display: none;
+        }
+        
+        .Active p{
+            display: block;
+        }
+        .Active .closeBtn{
+            display: block;
+        }
+        .Active button{
+            display: none;
+        }
+        .starContainer{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fa-star{
+            margin: 0.5rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .fa-star:hover{
+           color: rgb(207, 169, 44);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="clickBtn btn">Click me</button>
+        <button class="closeBtn btn">Close me</button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, cumque.</p>
+    </div>
+    <div class="starContainer">
+        <i class="fa-solid fa-star" id="1"></i>
+        <i class="fa-solid fa-star" id="2"></i>
+        <i class="fa-solid fa-star" id="3"></i>
+        <i class="fa-solid fa-star" id="4"></i>
+        <i class="fa-solid fa-star" id="5"></i>
+        <!-- <h3>You selected <span>3</span> star</h3> -->
+    </div>
+
+    <script>
+        let p = document.querySelector("p")
+        let btn = document.querySelectorAll(".btn")
+        let container = document.querySelector(".container")
+
+    btn.forEach(btn => {
+        btn.addEventListener("click" , (e) => {
+         let styles = e.currentTarget.classList;
+         if(styles.contains("clickBtn")){
+            container.classList.toggle("Active")
+         }
+         else{
+            container.classList.remove("Active")
+         }
+        })
+    });
+
+    </script>
+</body>
+</html>

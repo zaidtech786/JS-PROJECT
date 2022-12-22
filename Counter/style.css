@@ -1,0 +1,28 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5bd3d3;
+}
+.counter{
+    text-align: center;
+}
+.counter h1{
+    font-size: 5rem;
+}
+.btn{
+    padding: 6px 15px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 0px 5px;
+    cursor: pointer;
+    border-radius: 6px;
+    outline: none;
+    font-weight: 600;
+}
+.btn:hover{
+    background-color:black;
+    border: 1px solid rgb(49, 159, 223);
+    color: white;
+}

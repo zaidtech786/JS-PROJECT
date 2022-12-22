@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>review slider</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .boxContainer {
+      width: 100%;
+      height: 100vh;
+      /* background-color: rgb(163, 17, 17); */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box {
+      width: 210px;
+      height: 480px;
+      border: 1px solid black;
+      text-align: center;
+    }
+    .box img {
+      width: 205px;
+      height: 200px;
+    }
+    h4 {
+      font-size: 1.5rem;
+      padding-bottom: 5px;
+    }
+    h5 {
+      font-size: 1rem;
+      padding-bottom: 5px;
+    }
+    button {
+      margin: 0px 10px;
+      cursor: pointer;
+    }
+    .btn {
+      padding: 5px;
+      margin-top: 10px;
+      background-color: #00cec9;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid black;
+    }
+    .btn:hover {
+      border: 1px solid black;
+      background-color: transparent;
+    }
+  </style>
+  <body>
+    <div class="boxContainer">
+      <div class="box">
+        <img src="" class="img" />
+        <h4 class="name"></h4>
+        <h5 class="role"></h5>
+        <p class="text"></p>
+        <div class="indicators">
+          <button class="btn left">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button class="btn right">
+            <i class="fas fa-arrow-right"></i></button
+          ><br />
+          <button class="btn random">RandomClick</button>
+        </div>
+      </div>
+    </div>
+    <script>
+        let personsData = [
+            {
+                id:1,
+                img:"team-1.jpg",
+                name:"khali",
+                role:"Fighter",
+                text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum illo facere nulla ipsam placeat in laboriosam, pariatur quo magni, delectus id hic quidem nemo sed! Aliquid aperiam deleniti nesciunt molestias. ",
+            },
+            {
+                id:2,
+                img:"team-2.jpg",
+                name:"rock",
+                role:"Web Developer",
+                text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum illo facere nulla ipsam placeat in laboriosam, pariatur quo magni, delectus id hic quidem nemo sed! Aliquid aperiam deleniti nesciunt molestias. ",
+            },
+            {
+                id:3,
+                img:"team-3.jpg",
+                name:"John Cena",
+                role:"UI Ux Developer",
+                text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum illo facere nulla ipsam placeat in laboriosam, pariatur quo magni, delectus id hic quidem nemo sed! Aliquid aperiam deleniti nesciunt molestias. ",
+            },
+            {
+                id:4,
+                img:"team-4.jpg",
+                name:"scheamus",
+                role:"Data Analyst",
+                text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum illo facere nulla ipsam placeat in laboriosam, pariatur quo magni, delectus id hic quidem nemo sed! Aliquid aperiam deleniti nesciunt molestias.",
+            },
+        ];
+
+        let img=document.querySelector('.img');
+        let name=document.querySelector('.name');
+        let role=document.querySelector('.role');
+        let text=document.querySelector('.text');
+        let btnLeft=document.querySelector('.left');
+        let btnRight=document.querySelector('.right');
+        let btn=document.querySelector('.btn');
+        let btns=document.querySelectorAll('.btn')
+
+        let count=0;
+
+        const showPerson = () =>{
+           let data=personsData[count];
+           img.src=data.img;
+           name.innerHTML=data.name;
+           role.innerHTML=data.role;
+           text.innerHTML=data.text;
+        }
+        showPerson();
+
+//  First way to write code
+        // btnRight.addEventListener('click' ,function(){
+        //     count++;
+        //     if(count>personsData.length-1){
+        //         count=0;
+        //     }
+        //     showPerson();
+        // });
+
+        // btnLeft.addEventListener('click' ,function(){
+        //     count--;
+        //     if (count<0) {
+        //         count=personsData.length-1;
+        //     }
+        //     showPerson();
+        // });
+
+        //     btn.addEventListener('click',function(){
+    //   count=Math.floor(Math.random()*personsData.length);
+    //     showPerson();
+    //     });
+
+
+        // in this code we select all btns using  event (e) classlist
+        btns.forEach(function(btn) {
+            btn.addEventListener('click',function(e){
+            let styles=e.currentTarget.classList;
+            // console.log(styles);
+            if(styles.contains('right')){
+                count++;
+                if (count>personsData.length-1) {
+                    count=0;
+                }
+               showPerson();
+            }
+            else if (styles.contains('left')) {
+                count--;
+                if (count<0) {
+                    count=personsData.length-1;
+                }
+                showPerson();
+            } else {
+                count=Math.floor(Math.random()*personsData.length);
+               showPerson();
+            }
+            });
+
+        });
+
+    
+    </script>
+  </body>
+</html>

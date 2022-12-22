@@ -1,0 +1,30 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#textarea{
+    width: 50%;
+    height: 30%;
+    resize: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #00cec9;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0984e3;
+}
+@media screen and (max-width:900px){
+    #textarea{
+        width: 80%;
+    }
+}

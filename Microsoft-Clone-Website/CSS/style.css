@@ -1,0 +1,169 @@
+
+.navbar-brand img{
+	height: 25px;
+}
+
+.nav-link img{
+	height: 20px;
+}
+
+.carousel{
+	padding: 0px 50px;
+	width: 100%;
+}
+.sign{
+	border-radius: 50%;
+}
+.icons{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-weight: bold;
+}
+.iconcontainer h4{
+	font-size: 16px;
+	font-weight: 500;
+}
+.iconcontainer h4:hover{
+  text-decoration: underline;
+}
+main{
+	padding: 0px 80px;
+
+}
+.carousel-inner img{
+	height: 650px !important;
+}
+.carousel-caption{
+	width: 700px;
+	height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	line-height:20px ;
+	margin-left: 200px;
+}
+.carousel-item{
+	position: relative;
+}
+.carousel-caption h2{
+		font-weight: bold;
+}
+.carousel-caption button:hover{
+	border-bottom: 2px solid white;
+}
+.card{
+	border: none !important;
+}
+.card img{
+	height: 200px;
+}
+.img_btn{
+	padding: 5px 20px !important;
+}
+.primary{
+	text-decoration: none;
+}
+.primary:hover{
+	border-bottom: 2px solid black
+}
+.advertise{
+	height: 30%;
+	padding: 170px 80px;
+	margin:0px 80px ;
+	background: url('../images/adver.jpg');
+	background-repeat:no-repeat ;
+	background-size: 100% 100%;
+	background-position: center;
+}
+.adverbtn{
+	padding: 8px 20px !important;
+	border-radius: 0px !important;
+	border: none !important;
+}
+.adverbtn:hover{
+	background:blue ;
+	border-bottom: 2px solid black;
+}
+.ms_store h3{
+	font-size: 2rem;
+}
+.business{
+	padding: 0px 80px;
+}
+.business h3{
+	padding-top:40px ;
+}
+.card-text {
+	font-size: 14px;
+}
+.covid{
+	background-color: #dfe6e9;
+	height: 150px;
+	margin: 0px 80px;
+}
+.content{
+	padding-top: 25px;
+	margin-top: 15px;
+}
+.content h2{
+	font-size: 2.4rem;
+}
+.btnstyle{
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+}
+.btnstyle:hover{
+	color: black;
+	border-bottom: 2px solid black;
+}
+.social{
+	margin: 0px 80px;
+	/* padding: 0px 80px; */
+}
+.social{
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: row;
+}
+.social p{
+	padding: 0px 20px;
+}
+.socialcontainer img{
+	padding: 0px 6px;
+}
+.footer{
+	margin: 0px 80px;
+}
+.row p{
+	font-size: 0.7rem;
+	padding: 0px 5px;
+	cursor: pointer;
+}
+.row p:hover{
+	text-decoration: underline;
+}
+.footer_content{
+	padding-left: 180px;
+}
+
+.footer_content a{
+	color: black;
+	text-decoration: none;
+	padding: 0px 8px;
+	font-size: 0.9rem;
+}
+.footer_content a:hover{
+	text-decoration: underline;
+	color: black;
+}
+
+@media screen and (max-width:400px){
+.img{
+	width: 100%;
+	margin: auto;
+}
+}

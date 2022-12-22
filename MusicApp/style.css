@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/bg3.jpg');
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+}
+.container{
+    width: 200px;
+    height: 320px;
+    background-color: rgb(212, 212, 212);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.innerBody{
+    text-align: center;
+    padding: 20px;
+}
+.songName{
+    padding: 5px 0px;
+}
+.img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+.icons{
+    margin-top: 30px;
+    text-align: center;
+}
+.icons .fas{
+    padding: 10px;
+    cursor: pointer;
+}
+.fa-play{
+ background-color: #000;
+ border-radius:50% ;
+ color: white;
+
+}
+.fa-play:hover{
+    background-color: #fff;
+  color: rgb(0, 0, 0);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.fa-pause{
+    background-color: #000;
+ border-radius:50% ;
+ color: white;
+}
+.fa-pause:hover{
+    background-color: #000;
+ border-radius:50% ;
+ color: white;
+}
+
+/* Media Queries */
+
+@media only screen and (width:400px){
+  body{
+    height: 100vh;
+
+  }
+}

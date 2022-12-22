@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Api </title>
+</head>
+<body>
+    <h1>Testing Api</h1>
+    <div class="container">
+        <input type="search" class="search" placeholder="search here">
+    </div>
+
+
+    <script>
+        let container=document.querySelector(".container");
+        let search = document.querySelector(".search");
+
+        let url="https://jsonplaceholder.typicode.com/users";
+
+        const getData= (URL) => {
+            fetch(url).then( res => res.json()).then( (data) => {
+                DisplayData(data);
+                SearchData(data)
+            });
+        }
+        getData(url);
+
+        const DisplayData = (data) => {
+          data.forEach(element => {
+            console.log(element)
+            let li=`<li>${element.name}</li>`;
+            container.insertAdjacentHTML("beforeend",li);
+          });
+        }
+
+        const SearchData = (data) => {
+            search.addEventListener("keyup" , () => {
+                let filterData = data.filter(val => {
+                    if(search.value.startsWith(val.name)){
+                      console.log(val)
+                    }
+                })
+            })
+
+        }
+
+
+
+    </script>
+</body>
+</html>

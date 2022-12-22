@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo JS</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            overflow-x: hidden;
+            
+        }
+        .btn{
+            cursor: pointer;
+        }
+        .ans{
+            margin-top: 0.5rem;
+            display: none;
+        }
+        .box{
+            margin-top: 1rem;
+            /* border: 1px solid black; */
+            padding: 1rem;
+            width: 100%;
+            border-radius: 5px ;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        }
+        .container{
+            min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background-color: #74b9ff;
+        }
+        .boxContainer{
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            padding: 0.5rem 1rem;
+            background-color: #fff;
+            border-radius: 5px;
+            width: 30%;
+        }
+        .upbtn{
+            display: none;
+        }
+        .show-text .ans{
+            display: block;
+        }
+        .show-text .upbtn{
+            display: inline;
+            cursor: pointer;
+        }
+        
+        .show-text .btn{
+            display: none;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="boxContainer">
+            <div class="box">
+                <h2 class="question ">What is the full form of HTMl ? <i class="fa-sharp fa-solid fa-caret-down btn"></i> <i class="fa-sharp fa-solid fa-caret-up upbtn"></i></h2> 
+                 <p class="ans">Hypertext Markup Language</p>
+            </div>
+            <div class="box">
+                <h2 class="question ">What is the full form of CSS ? <i class="fa-sharp fa-solid fa-caret-down btn"></i> <i class="fa-sharp fa-solid fa-caret-up upbtn"></i> </h2> 
+                 <p class="ans">Cascading Style Sheet</p>
+            </div>
+            <div class="box">
+                <h2 class="question ">What is the full form of JS ? <i class="fa-sharp fa-solid fa-caret-down btn"></i> <i class="fa-sharp fa-solid fa-caret-up upbtn"></i> </h2> 
+                 <p class="ans">JAVAScript</p>
+            </div>
+            <div class="box">
+                <h2 class="question ">What is the full form of PHP ? <i class="fa-sharp fa-solid fa-caret-down btn"></i> <i class="fa-sharp fa-solid fa-caret-up upbtn"></i> </h2> 
+                 <p class="ans">Hypertext Preprocessor</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let question = document.querySelectorAll(".question");
+        let ans = document.querySelector(".ans");
+        
+        //    btn.forEach( btn => {
+            //      btn.addEventListener("click" , (e) => {
+                //        let ques = e.currentTarget.parentElement;
+                //        ques.classList.toggle("show-text");
+                //      })
+                //    })
+                question.forEach( ques => {
+        let btn = document.querySelector(".btn");
+     btn.addEventListener("click" ,() => {
+        ques.classList.toggle("show-text");
+     })
+    })
+
+    </script>
+</body>
+</html>

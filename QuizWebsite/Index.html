@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="quizCont">
+        <h2 class="question">Welcome to the quiz</h2>
+        <ul>
+            <li>
+                <input type="radio" name="quiz" id="ans1" class="ans">
+                <label id="option1">option1</label>
+            </li>
+            <li>
+                <input type="radio" name="quiz" id="ans2" class="ans">
+                <label id="option2">option2</label>
+            </li>
+            <li>
+                <input type="radio" name="quiz" id="ans3" class="ans">
+                <label id="option3">option3</label>
+            </li>
+            <li>
+                <input type="radio" name="quiz" id="ans4" class="ans">
+                <label id="option4">option4</label>
+            </li>
+        </ul>
+        <button class="btn">Submit</button>
+        
+            <div class="score" id="scoreArea">
+                <h3 class="result">You scored 3/4</h3>
+        <button class=" reloadBtn" onclick="location.reload()">Play Again</button>
+            </div>
+        
+            
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
