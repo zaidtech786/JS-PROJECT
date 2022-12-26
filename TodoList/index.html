@@ -1,113 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./Style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
-<body>
-      <!-- navbar section starts -->
-      <nav>
-        <ul>
-            <li>Home</li>
-        </ul>
-        <input type="search" placeholder="Search here" id="search">
-        <input type="checkbox" class="checkbox" id="checkbox">
-        <label for="checkbox" class="label">
-            <i class="fas fa-moon"></i>
-            <i class='fas fa-sun'></i>
-            <div class='ball'>
-        </label>
-    </nav>
-      <!-- navbar section Ends -->
-
-
-      <!-- Main section starts -->
-    <button class="btn">Add note</button>
-
-    <div class="boxContainer">
-      <div class="box">  
-        <textarea class="textarea"></textarea>
-        <div class="icons">
-            <i class="fas fa-save"></i>
-             <i class="fas fa-edit"></i>
-             <i class="fas fa-trash"></i>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" placeholder="Enter Something..." class="input" />
+      <div class="btnContainer">
+        <span class="all active">All</span>
+        <span class="pending">Pending</span>
+        <span class="completed">Completed</span>
+        <button class="btn">clear All</button>
+      </div>
+      <hr />
+      <div class="taskContainer">
+        <div class="tasks">
+          <label for="0"></label>
+          <input type="checkbox" name="checkbox" id="0" />
+          <p class="task">Zaid Siddiqui</p>
         </div>
-        
-        <div class="colorBtn">
-            <div class="color1"></div>
-            <div class="color2"></div>
-            <div class="color3"></div>
-            <div class="color4"></div>
-       </div>
-     </div>  
-      <div class="box">  
-        <textarea class="textarea"></textarea>
-        <div class="icons">
-            <i class="fas fa-save"></i>
-             <i class="fas fa-edit"></i>
-             <i class="fas fa-trash"></i>
+        <i class="fa-solid fa-ellipsis settingBtn"></i>
+        <div class="dropDown">
+          <ul>
+            <li><i class="fa-solid fa-pen-to-square"></i>Edit</li>
+            <hr />
+            <li><i class="fa-solid fa-trash"></i>Delete</li>
+          </ul>
         </div>
-        
-        <div class="colorBtn">
-            <div class="color1"></div>
-            <div class="color2"></div>
-            <div class="color3"></div>
-            <div class="color4"></div>
-       </div>
-     </div>  
-      <div class="box">  
-        <textarea class="textarea"></textarea>
-        <div class="icons">
-            <i class="fas fa-save"></i>
-             <i class="fas fa-edit"></i>
-             <i class="fas fa-trash"></i>
-        </div>
-        
-        <div class="colorBtn">
-            <div class="color1"></div>
-            <div class="color2"></div>
-            <div class="color3"></div>
-            <div class="color4"></div>
-       </div>
-     </div>  
-      <div class="box">  
-        <textarea class="textarea"></textarea>
-        <div class="icons">
-            <i class="fas fa-save"></i>
-             <i class="fas fa-edit"></i>
-             <i class="fas fa-trash"></i>
-        </div>
-        
-        <div class="colorBtn">
-            <div class="color1"></div>
-            <div class="color2"></div>
-            <div class="color3"></div>
-            <div class="color4"></div>
-       </div>
-     </div>  
-      <div class="box">  
-        <textarea class="textarea"></textarea>
-        <div class="icons">
-            <i class="fas fa-save"></i>
-             <i class="fas fa-edit"></i>
-             <i class="fas fa-trash"></i>
-        </div>
-        
-        <div class="colorBtn">
-            <div class="color1"></div>
-            <div class="color2"></div>
-            <div class="color3"></div>
-            <div class="color4"></div>
-       </div>
-     </div>  
+      </div>
     </div>
-     
-     <!-- Main section Ends -->
-
-     <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

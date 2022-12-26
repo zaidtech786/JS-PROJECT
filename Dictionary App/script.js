@@ -35,7 +35,6 @@ const AudioFunc = () => {
         }
         else{
             let audioData = new Audio(item.audio );
-            console.log(audioData)
             audioData.play();
         }
     })

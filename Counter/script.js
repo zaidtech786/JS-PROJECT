@@ -8,9 +8,13 @@ btns.forEach(function(btn)  {
       console.log(e.currentTarget.classList);
       let styles=e.currentTarget.classList;
      if (styles.contains('inc')) {
-         counter.innerHTML=count++;
+        count = count+1;
+         counter.innerHTML=count;
      }
      else if (styles.contains('dec')) {
+        if(count < 0){
+            return counter.innerHTML =0;
+        }
         counter.innerHTML=count--;
      }
      else{

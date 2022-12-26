@@ -79,11 +79,9 @@ const getCheckedAns = () => {
 // Button click Function
 btn.addEventListener('click', () => {
     let checkedAns = getCheckedAns();
-    console.log(checkedAns)
     if (checkedAns === quizData[quizCount].ans) {
        score=score+1;
     };
-    console.log(score);
     quizCount++;
     if (quizCount < quizData.length)
         loadQuestion();

@@ -83,7 +83,6 @@ window.addEventListener("DOMContentLoaded",function(){
 
 const displayMenuItems = (menuItemsdata) =>{
     let displayMenu=menuItemsdata.map(function(item){
-           console.log(item);
         return `     <article class="menu-item">
         <img src="${item.image}" alt="menu item" class="photo" />
         <div class="item-info">
@@ -104,14 +103,11 @@ const displayMenuItems = (menuItemsdata) =>{
 
 filterBtn.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
-      // console.log(e.currentTarget.dataset);
       const category = e.currentTarget.dataset.id;
       const menuCategory = menuData.filter(function (menuItem) {
-        // console.log(menuItem.category);
         if (menuItem.category === category) {
           return menuItem;
         }
-        console.log(menuItem);
       });
       if (category === "all") {
         displayMenuItems(menuData);

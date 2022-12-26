@@ -1,141 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(80, 210, 219);
-}
-.box{
-    width: 30%;
-    height: auto;
-    padding: 0.7rem ;
-    background-color: #fff;
-    border-radius:8px ;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}     .showData{
-            width: 500px;
-            visibility: hidden;
-        }
-        .show{
-            visibility: visible;
-        }
-        .input{
-    /* margin-top: 1rem; */
-    width: 100%;
-    height: 40px;
-    font-size: 1rem;
-    padding:0rem 1rem;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid black;
-}
-.contents{
-    margin-top: 1rem;
-    width: 100%;
-}
-.tag{
-    border: 1px solid black;
-    padding: 0.5rem;
-    display: inline;
-    border-radius: 5px;
-    margin: 0.3rem;
-    line-height: 40px;
-}
-.btn{
-    cursor: pointer;
-}
-.resultContainer{
-    display: flex;
-    
-    justify-content: space-between;
-}
-       
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(80, 210, 219);
+      }
+      .box {
+        width: 30%;
+        height: auto;
+        padding: 0.7rem;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .showData {
+        width: 500px;
+        visibility: hidden;
+      }
+      .show {
+        visibility: visible;
+      }
+      .input {
+        /* margin-top: 1rem; */
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        padding: 0rem 1rem;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid black;
+      }
+      .contents {
+        margin-top: 1rem;
+        width: 100%;
+        display: inline;
+      }
+      .tag {
+        border: 1px solid black;
+        padding: 0.5rem;
+        display: inline;
+        border-radius: 5px;
+        margin: 0.3rem;
+        line-height: 40px;
+      }
+      .btn {
+        cursor: pointer;
+      }
+      .resultContainer {
+        display: flex;
+
+        justify-content: space-between;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- <div class="container">
         <p class="text">What is the full form of html and explain HTML?? <button class="btn">Show</button></p>
         <p class="showData">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae inventore saepe sint pariatur! Ipsa, quam. Repellendus iusto autem aut quam perspiciatis temporibus quis maxime explicabo, omnis, pariatur totam. Cumque natus temporibus voluptatem culpa ducimus quasi similique corrupti, iure optio pariatur.</p>
     </div> -->
     <div class="container">
-        <div class="box">
-            <input type="text" class="input" >
-            <div class="contents">
-                <!-- <p class="tag">html <i class="fa-regular fa-circle-xmark btn"></i></p> -->
-            </div>
-            <div class="resultContainer">
-                <p class="res" style="text-align: center; font-weight: bold;">At a time only 10 tags are allowed</p>
-                <span class="TotalTag" style="font-weight: bold;">3</span> 
-
-            </div>
+      <div class="box">
+        <input type="text" class="input" />
+        <!-- <div class="contents">
+                <p class="tag">html <i class="fa-regular fa-circle-xmark btn"></i></p>
+            </div> -->
+        <div class="resultContainer">
+          <p class="res" style="text-align: center; font-weight: bold">
+            At a time only 10 tags are allowed
+          </p>
+          <span class="TotalTag" style="font-weight: bold">3</span>
         </div>
+      </div>
     </div>
-  
+
     <script>
-        let input = document.querySelector(".input")
-        let tag = document.querySelector(".tag");
-        let contents = document.querySelector(".contents");
-        let TotalTag = document.querySelector(".TotalTag");
-        let res = document.querySelector(".res");
+      let input = document.querySelector(".input");
+      let tag = document.querySelector(".tag");
+      let contents = document.querySelector(".contents");
+      let TotalTag = document.querySelector(".TotalTag");
+      let res = document.querySelector(".res");
+      let box = document.querySelector(".box");
+      let tagArr = [];
 
-        const RemoveItem = (item) => {
-            console.log("first")
-        }
-
-        const createElement = (inputVal) => {
-            let tag = `<p class="tag">${inputVal} <i class="fa-regular fa-circle-xmark btn" onclick="RemoveItem(this)" ></i></p>`;
-            contents.insertAdjacentHTML("beforeend",tag);
-           
-                if(TotalTag.innerText>1){
-                    TotalTag.innerHTML = TotalTag.innerHTML-1;
-                }
-                else{
-                    res.innerHTML = `Your limit is axceeded`;
-                    input.setAttribute("disabled",true)
-                }
-            
-        }
-        
-        input.addEventListener("keyup", (e) => {
-            let inputTag = e.target.value; 
-            if(e.key=="Enter"){
-                createElement(inputTag);
-                e.target.value = "";
-            }
+      const updateLS = (tags) => {
+        tags.forEach((tagg) => {
+           return tagArr.push(tagg.innerText);
         });
-        
-        // btn.addEventListener("click" ,() => {
-        //     let btn = tag.querySelector(".btn")
-        //     console.log("first")
-        // })
+        localStorage.setItem("Tags", JSON.stringify(tagArr));
+      };
+
+      const createElement = (inputVal) => {
+        let count = 3;
+        // Creating an HTML ELement
+        let container = document.createElement("div");
+        container.classList.add("contents");
+        let htmlData = `<p class="tag"> ${inputVal}<i class="fa-regular fa-circle-xmark btn"></i></p> `;
+        container.insertAdjacentHTML("beforeend", htmlData);
+        box.appendChild(container);
+
+        let tags = container.querySelectorAll(".tag");
+        updateLS(tags);
+
+        TotalTag.innerHTML = tagArr.length
+        if( tagArr.length > 10){
+          input.setAttribute("disabled" , true)
+        }
+
+        // Deleting a Tag
+        let delButton = container.querySelector(".btn");
+            delButton.addEventListener("click" , () => {
+                container.remove();
+                let findI = tagArr.indexOf(tags.innerText);
+                console.log(findI)
+                // tagArr.splice(findI,findI);
+                // console.log(first)
+            })
+
+      };
+
+      let LsTags = JSON.parse(localStorage.getItem("Tags"));
+      if(LsTags){
+        LsTags.forEach(tag => {
+             createElement(tag)
+        })
+      }
+      
+
+      input.addEventListener("keyup", (e) => {
+        let inputTag = e.target.value;
+        if (e.key == "Enter") {
+          createElement(inputTag);
+          e.target.value = "";
+        }
+      });
+
+      // btn.addEventListener("click" ,() => {
+      //     let btn = tag.querySelector(".btn")
+      //     console.log("first")
+      // })
     </script>
-</body>
+  </body>
 </html>

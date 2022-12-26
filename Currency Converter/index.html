@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <title>Currency Converter</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="box">
-            <h1 style="text-align: center;" class="h1">Currency Converter</h1>
-            <div class="inputs">
-                <label for="input">Enter Amount</label>
-                <input type="text" id = "input" class="input">
-            </div>
-            <div class="fromToContainer">
-                <div class="from">
-                    <p class="title">From</p>
-                    <div class="Data">
-                       <p>🚩</p>
-                       <select name="country" id="selectFrom"> </select>
-                    </div>
-                </div>
-                    <i class="fa-sharp fa-solid fa-right-left exchangeIcon"></i>
-                    <div class="To">
-                        <p class="title">To</p>
-                        <div class="Data">
-                           <p>🏳️‍🌈</p>
-                           <select name="country" id="selectTo">  </select>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="resultCont">
-                <p class="result"></p>
-                <button >Get Exchange Rate</button>
-            </div>
+      <div class="box">
+        <h1 style="text-align: center" class="h1">Currency Converter</h1>
+        <div class="inputs">
+          <label for="input">Enter Amount</label>
+          <input type="text" id="input" class="input" />
         </div>
+        <div class="fromToContainer">
+          <div class="from">
+            <p class="title">From</p>
+            <div class="Data">
+              <p>🚩</p>
+              <select name="country" id="selectFrom">
+                <option value="USD">USD</option>
+              </select>
+            </div>
+          </div>
+          <i class="fa-sharp fa-solid fa-right-left exchangeIcon"></i>
+          <div class="To">
+            <p class="title">To</p>
+            <div class="Data">
+              <p>🏳️‍🌈</p>
+              <select name="country" id="selectTo">
+                <option value="INR">INR</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="resultCont">
+          <p class="result"></p>
+          <button>Get Exchange Rate</button>
+        </div>
+      </div>
     </div>
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="JS/CountryList.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="JS/CountryList.js"></script>
     <script src="JS/script.js"></script>
-    
-</body>
+  </body>
 </html>
-

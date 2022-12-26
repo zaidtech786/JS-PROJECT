@@ -5,76 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Temperature Converter</title>
     <style>
-        .container {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-        }
-        .cel{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-right: 10px;
-        }
-        .Fah{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        label{
-            margin-top: 10px;
-        }
+       
+        
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="cel">
-            <input type="number" id="cel" onchange="setTwoNumberDecimal">
-            <label>Celcius</label>
-        </div>
-
-        <div class="Fah">
-            <input type="number" id="Fah" onchange="setTwoNumberDecimal">
-            <label>Fahrenheight</label>
-        </div>
+       <h2 style="text-align: center;">Enter the temperature you'd like to convert</h2>
+       <div class="inputField">
+        <input type="number" name="no" id="input">
+        <select id="temp">
+            <option value="cel" id="cel">Celcius</option>
+            <option value="Fah" id="Fah">Fahrenheit</option>
+        </select>
+    </div>
+    <div class="lastCont">
+        <p class="res"></p>
+           <button class="btn">Submit</button>
+    </div>
     </div>
 
-    <script>
-    let cel=document.querySelector('#cel');
-    let Fah=document.querySelector('#Fah');
-
-
-
-
-    cel.addEventListener('input',function(){
-      let cel=this.value;
-    let result=(9/5 * cel) + 32;
-    if (!Number.isInteger(result)) {
-            result=result.toFixed(4);
-        }
-    Fah.value=result;
-    });
-
-    Fah.addEventListener('input',function(){
-        let F=this.value;
-        let result=(Math.round(F - 32) * 5/9);
-        if (!Number.isInteger(result)) {
-            result=result.toFixed(4);
-        }
-        cel.value=result;
-        
-    })
-
-
-
-
-    </script>
+    <script src="script.js"></script>
+    
 </body>
 
 </html>

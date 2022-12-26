@@ -1,11 +1,8 @@
-let btn=document.querySelector(".btn")
+let settingBtn = document.querySelector(".settingBtn")
+let dropDown = document.querySelector(".dropDown")
+let tasks = document.querySelector(".tasks")
 
-btn.addEventListener("click",() => {
-    let element = document.createElement("div");
-    element.classList.add('.box');
-    element.innerHTML="This is a box"
-    console.log(element)
-    document.body.appendChild(element)
-
+settingBtn.addEventListener("click" , () => {
+    console.log("first")
+    dropDown.classList.toggle("toggle")
 })
-    
